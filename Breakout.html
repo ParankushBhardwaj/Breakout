@@ -40,7 +40,18 @@
             var dx = 2;
             var dy = -2;
 
+            //used for ball size and as a checker for collisions against walls
             var ballRadius = 10;
+
+
+            //below vars are used for human-control of ball
+            var paddleHeight= 10;
+            var paddleWidth = 75;
+            var paddleX = (canvas.width - paddleWidth)/2;
+
+            var rightPressed = false;
+            var leftPressed = false;
+
 
             function draw() {
 
@@ -53,11 +64,23 @@
             }
 
 
+            function paddle() {
+
+                paint.beginPath();
+                paint.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+                paint.fillStyle = "#0095DD";
+                paint.fill();
+                paint.closePath();
+
+            }
+
+
             function move() {
                 //clear rect eliminates the circle from the previous frame.
                 paint.clearRect(0, 0, canvas.width, canvas.height);
 
                 draw();
+                paddle();
 
 
                 <!-- Checks for collisions, if ball collides with wall, inverses ball's direction. -->
@@ -74,6 +97,13 @@
 
                 }
 
+                if(rightPressed && paddleX < canvas.width-paddleWidth) {
+                    paddleX += 7;
+                }
+                else if(leftPressed && paddleX > 0) {
+                    paddleX -= 7;
+                }
+
 
                 //moves position of ball by the speed.
                 x+= dx;
@@ -81,6 +111,30 @@
 
 
             }
+
+
+            //below event listeners look for key pressed
+            document.addEventListener("keydown", keyDownHandler, false);
+            document.addEventListener("keyup", keyUpHandler, false);
+
+            function keyDownHandler(e) {
+                if(e.keyCode == 39) {
+                    rightPressed = true;
+                }
+                else if(e.keyCode == 37) {
+                    leftPressed = true;
+                }
+            }
+
+            function keyUpHandler(e) {
+                if(e.keyCode == 39) {
+                    rightPressed = false;
+                }
+                else if(e.keyCode == 37) {
+                    leftPressed = false;
+                }
+            }
+
 
             setInterval(move, 10);
 
