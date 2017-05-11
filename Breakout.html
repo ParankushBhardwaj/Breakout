@@ -1,10 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
-</body>
+    <head>
+
+        <meta charset="UTF-8">
+
+
+        <style>
+
+            { padding: 0; margin: 0; }
+            canvas {background: #eee; display: block; margin: 0 auto;}
+
+        </style>
+
+
+    </head>
+
+
+
+    <body>
+
+        <!-- canvass generates the gray box that contains the game. -->
+        <canvas id = "myCanvas" width = "480" height = "320"> </canvas>
+
+        <script>
+
+            var canvas = document.getElementById("myCanvas");
+
+
+            <!-- paint will be used for creating dynamic objects in the canvass. -->
+            var paint = canvas.getContext("2d");
+
+
+            <!-- Below, we create the red rectangle. -->
+            paint.beginPath();
+            paint.rect(20,40,50,50);
+            paint.fillStyle = "red";
+            paint.fill();
+            paint.closePath();
+
+            <!-- below, we make the green circle. -->
+            paint.beginPath();
+            paint.arc(240,160,20,0, Math.PI*2, false);
+            paint.fillStyle = "green";
+            paint.fill();
+            paint.closePath();
+
+            <!-- below, we make a rectangle with a blue outline. -->
+            paint.beginPath();
+            paint.rect(160, 10, 100, 40);
+            paint.strokeStyle = "rgba(0, 0, 255, 0.5)";
+            paint.stroke();
+            paint.closePath();
+
+
+
+
+
+        </script>
+
+    </body>
+
+
 </html>
