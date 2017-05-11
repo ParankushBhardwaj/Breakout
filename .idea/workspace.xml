@@ -20,8 +20,8 @@
       <file leaf-file-name="Breakout.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Breakout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2541">
-              <caret line="174" column="34" lean-forward="false" selection-start-line="174" selection-start-column="34" selection-end-line="174" selection-end-column="34" />
+            <state relative-caret-position="3390">
+              <caret line="226" column="13" lean-forward="true" selection-start-line="226" selection-start-column="13" selection-end-line="226" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -35,6 +35,12 @@
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>blue</find>
+      <find>fill</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -181,12 +187,12 @@
       <option name="presentableId" value="Default" />
       <updated>1494533422069</updated>
       <workItem from="1494533424814" duration="4000" />
-      <workItem from="1494533441271" duration="5925000" />
+      <workItem from="1494533441271" duration="6562000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5929000" />
+    <option name="totallyTimeSpent" value="6566000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="86" y="22" width="1400" height="786" extended-state="0" />
@@ -223,8 +229,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Breakout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2541">
-          <caret line="174" column="34" lean-forward="false" selection-start-line="174" selection-start-column="34" selection-end-line="174" selection-end-column="34" />
+        <state relative-caret-position="3390">
+          <caret line="226" column="13" lean-forward="true" selection-start-line="226" selection-start-column="13" selection-end-line="226" selection-end-column="13" />
           <folding />
         </state>
       </provider>
