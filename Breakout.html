@@ -40,11 +40,12 @@
             var dx = 2;
             var dy = -2;
 
+            var ballRadius = 10;
 
             function draw() {
 
                 paint.beginPath();
-                paint.arc(x, y, 10, 0, Math.PI*2);
+                paint.arc(x, y, ballRadius, 0, Math.PI*2);
                 paint.fillStyle = "#0095DD";
                 paint.fill();
                 paint.closePath();
@@ -58,9 +59,26 @@
 
                 draw();
 
+
+                <!-- Checks for collisions, if ball collides with wall, inverses ball's direction. -->
+
+                //check if ball hits the top or bottom
+                if( y + dy < ballRadius ||  y + dy > canvas.height - ballRadius) {
+                    dy = -dy;
+
+                }
+
+                //check if ball hits the left or right
+                if( x + dx < ballRadius ||  x + dx >  canvas.width - ballRadius) {
+                    dx = -dx;
+
+                }
+
+
                 //moves position of ball by the speed.
                 x+= dx;
                 y += dy;
+
 
             }
 
